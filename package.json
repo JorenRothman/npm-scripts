@@ -1,13 +1,13 @@
 {
-    "name": "wireitproject",
+    "name": "npm-scripts",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "postcss": "postcss dist/css/style.min.css -r --map",
         "lint:scss": "stylelint  --cache --cache-location .stylelintcache --color src/scss/**/*.scss",
         "lint:js": "eslint src/js/**/*.js --cache --cache-location .eslintcache --color",
-        "build:scss": "sass src/scss/base.scss dist/css/style.min.css --style compressed --update --load-path=\"node_modules\" && npm run postcss",
+        "postcss": "postcss dist/css/style.min.css -r ",
+        "build:scss": "sass src/scss/base.scss dist/css/style.min.css --style compressed --load-path=\"node_modules\" && npm run postcss",
         "build:js": "webpack --config webpack.prod.js",
         "build": "npm-run-all lint:* build:*",
         "watch:scss": "onchange \"src/scss/**/*.scss\" -- npm run build:scss",
