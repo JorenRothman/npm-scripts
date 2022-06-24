@@ -1,0 +1,100 @@
+.steps {
+    overflow: hidden;
+    margin: rem(104px) 0;
+
+    &__navigation {
+        margin-bottom: rem(50px);
+        display: flex;
+    }
+
+    &__prev,
+    &__next {
+        display: inline-block;
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__next {
+        margin-left: auto;
+    }
+
+    &__swiper {
+        overflow: visible;
+        align-items: stretch;
+    }
+
+    .step {
+        border: solid rem(2px) $blue-500;
+        height: auto;
+        padding: rem(40px) rem(35px) rem(32px);
+        border-radius: rem(4px);
+
+        &__index {
+            margin-bottom: rem(65px);
+        }
+
+        &__title {
+            margin-bottom: rem(10px);
+        }
+
+        .button {
+            @include button--color-white;
+            border-width: rem(2px);
+            margin-top: rem(32px);
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    @include mq('tablet') {
+        margin: rem(80px) 0;
+
+        &__navigation {
+            margin-bottom: rem(38px);
+        }
+
+        .step {
+            padding: rem(30px) rem(26px) rem(23px);
+
+            &__index {
+                margin-bottom: rem(50px);
+            }
+
+            &__title {
+                margin-bottom: rem(7px);
+            }
+
+            .button {
+                margin-top: rem(24px);
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        margin: rem(69px) 0;
+
+        &__navigation {
+            margin-bottom: rem(33px);
+        }
+
+        .step {
+            padding: rem(26px) rem(23px) rem(21px);
+
+            &__index {
+                margin-bottom: rem(43px);
+            }
+
+            &__title {
+                margin-bottom: rem(6px);
+            }
+
+            .button {
+                margin-top: rem(21px);
+            }
+        }
+    }
+}

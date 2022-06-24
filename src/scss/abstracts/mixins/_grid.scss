@@ -1,0 +1,27 @@
+@use 'sass:math';
+
+@mixin grid($columns, $column-gap: 0, $row-gap: $column-gap) {
+    display: grid;
+    gap: $row-gap $column-gap;
+    grid-template-columns: $columns;
+}
+
+@mixin grid-even($columns, $column-gap: 0, $row-gap: $column-gap) {
+    $columns: repeat($columns, 1fr);
+
+    @include grid($columns, $column-gap, $row-gap);
+}
+
+@mixin flex-grid($columns, $column-gap: 0, $row-gap: $column-gap) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -$row-gap;
+    margin-left: -$column-gap;
+
+    > * {
+        flex: 0 0 auto;
+        width: math.div(100%, $columns);
+        padding-left: $column-gap;
+        padding-top: $row-gap;
+    }
+}

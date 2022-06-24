@@ -1,0 +1,156 @@
+@mixin inherits {
+    p,
+    a,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        font-weight: inherit;
+    }
+}
+
+@mixin font-style-title-huge {
+    font-size: rem(100px);
+    line-height: 1;
+    letter-spacing: em(-1px, 100px);
+    font-weight: 800;
+    font-family: $avenir-next-condensed;
+
+    @include mq('tablet') {
+        font-size: rem(80px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(65px);
+    }
+}
+
+@mixin font-style-title-1 {
+    font-size: rem(46px);
+    line-height: 1.1739130435;
+    letter-spacing: em(-1px, 46px);
+    font-weight: 700;
+    font-family: $avenir-next-condensed;
+
+    @include mq('tablet') {
+        font-size: rem(35px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(30px);
+    }
+}
+
+@mixin font-style-title-2 {
+    font-size: rem(32px);
+    line-height: 1.4375;
+    font-weight: 700;
+    letter-spacing: em(-1px, 32px);
+    font-family: $avenir-next-condensed;
+
+    @include mq('tablet') {
+        font-size: rem(24px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(21px);
+    }
+}
+
+@mixin font-style-title-3 {
+    font-size: rem(22px);
+    line-height: 1.5454545455;
+    font-weight: 800;
+
+    @include mq('tablet') {
+        font-size: rem(17px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(14px);
+    }
+}
+
+@mixin font-style-title-5 {
+    font-size: rem(20px);
+    line-height: 1.7;
+    font-weight: 500;
+
+    @include mq('tablet') {
+        font-size: rem(16px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(14px);
+    }
+}
+
+@mixin font-style-paragraph-default {
+    font-size: rem(17px);
+    line-height: 1.7647058824;
+    font-weight: 500;
+
+    @include mq('tablet') {
+        font-size: rem(16px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(14px);
+    }
+}
+
+@mixin font-style-paragraph-small {
+    font-size: rem(14px);
+    line-height: 1.6428571429;
+    font-weight: 500;
+}
+
+@mixin font-style-paragraph-big {
+    font-size: rem(19px);
+    line-height: 1.6842105263;
+    font-weight: 500;
+
+    @include mq('tablet') {
+        font-size: rem(18px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(16px);
+    }
+}
+
+@mixin font-style-medium {
+    font-size: rem(21px);
+    line-height: 1.6190476193;
+    font-weight: 800;
+
+    @include mq('tablet') {
+        font-size: rem(17px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(14px);
+    }
+}
+
+@mixin font-style-label {
+    font-size: rem(13px);
+    line-height: 1.5384615385;
+    font-weight: 500;
+}
+
+@mixin font-style-caption {
+    font-size: rem(16px);
+    line-height: 1.5;
+    font-weight: 400;
+
+    @include mq('tablet') {
+        font-size: rem(14px);
+    }
+}

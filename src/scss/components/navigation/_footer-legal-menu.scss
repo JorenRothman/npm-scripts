@@ -1,0 +1,24 @@
+.footer-legal-menu {
+    &__item {
+        display: inline-block;
+        margin-right: rem(58px);
+    }
+
+    &__link {
+        color: $light;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(400px)})') {
+        &__list {
+            @include grid-even(1, rem(5px));
+        }
+
+        &__item {
+            margin-right: rem(0);
+        }
+    }
+}

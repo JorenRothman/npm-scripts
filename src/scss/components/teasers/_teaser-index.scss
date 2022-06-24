@@ -1,0 +1,90 @@
+.index {
+    border-bottom: solid 2px $blue-500;
+
+    &__header {
+        position: relative;
+        margin-bottom: rem(23px);
+        cursor: pointer;
+    }
+
+    &__letter {
+        margin-bottom: rem(8px);
+        text-transform: uppercase;
+    }
+
+    &__title {
+        position: relative;
+
+        .svg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    &__body {
+        display: none;
+        padding-bottom: rem(25px);
+
+        .button {
+            margin-top: rem(37px);
+        }
+    }
+
+    &.is-active {
+        .index__title {
+            .svg {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    }
+
+    @include mq('tablet') {
+        &__header {
+            margin-bottom: rem(17px);
+        }
+
+        &__letter {
+            margin-bottom: rem(6px);
+        }
+
+        &__body {
+            padding-bottom: rem(19px);
+
+            .button {
+                margin-top: rem(28px);
+            }
+        }
+
+        &__title {
+            .svg {
+                width: rem(14px);
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        &__header {
+            margin-bottom: rem(15px);
+        }
+
+        &__letter {
+            margin-bottom: rem(5px);
+        }
+
+        &__body {
+            padding-bottom: rem(16px);
+
+            .button {
+                margin-top: rem(24px);
+            }
+        }
+
+        &__title {
+            .svg {
+                width: rem(12px);
+            }
+        }
+    }
+}

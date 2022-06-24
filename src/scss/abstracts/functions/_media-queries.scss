@@ -1,0 +1,9 @@
+@function get-media-query-size($media-query) {
+    $size: map-get($media-queries, $media-query);
+
+    @if $size == null {
+        $size: $media-query;
+    }
+
+    @return $size;
+}

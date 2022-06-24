@@ -1,0 +1,28 @@
+.form {
+    &__grid {
+        @include grid-even(1);
+    }
+
+    &__message {
+        @include font-style-medium;
+        margin-bottom: 0.4em;
+        color: $light;
+    }
+}
+
+.form--newsletter {
+    .form__grid {
+        @include grid(2fr rem(226px), rem(45px), 0);
+        align-items: flex-end;
+    }
+
+    @include mq('screen and (max-width: #{rem(870px)})') {
+        .form__grid {
+            @include grid(1fr, rem(45px), 0);
+        }
+
+        .form__column:last-child {
+            margin-top: rem(26px);
+        }
+    }
+}

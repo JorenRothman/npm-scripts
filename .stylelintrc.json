@@ -1,0 +1,39 @@
+{
+    "extends": "stylelint-config-sass-guidelines",
+    "plugins": ["stylelint-scss"],
+    "rules": {
+        "indentation": 4,
+        "no-empty-source": null,
+        "selector-class-pattern": null,
+        "order/properties-alphabetical-order": null,
+        "selector-no-qualifying-type": null,
+        "function-parentheses-space-inside": "never",
+        "scss/at-mixin-argumentless-call-parentheses": "never",
+        "scss/at-import-partial-extension-blacklist": "never",
+        "max-nesting-depth": 4,
+        "order/order": [
+            "custom-properties",
+            "dollar-variables",
+            {
+                "type": "at-rule",
+                "name": "include"
+            },
+            "declarations",
+            {
+                "type": "at-rule",
+                "name": "if"
+            },
+            "rules",
+            {
+                "type": "at-rule",
+                "name": "include",
+                "parameter": "with-count"
+            },
+            {
+                "type": "at-rule",
+                "name": "include",
+                "parameter": "mq"
+            }
+        ]
+    }
+}

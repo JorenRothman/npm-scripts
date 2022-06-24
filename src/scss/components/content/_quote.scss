@@ -1,0 +1,47 @@
+.quote {
+    margin-bottom: rem(80px);
+
+    &__container {
+        transform: translateX(rem(-100px));
+    }
+
+    &__text {
+        font-size: rem(50px);
+        line-height: 1.3333333333;
+    }
+
+    &__name {
+        font-weight: 400;
+        margin-top: rem(30px);
+    }
+
+    @include mq('screen and (max-width: #{rem(1400px)})') {
+        &__container {
+            transform: translateX(0);
+        }
+    }
+
+    @include mq('tablet') {
+        margin-bottom: rem(61px);
+
+        &__text {
+            font-size: rem(46px);
+        }
+
+        &__name {
+            margin-top: rem(23px);
+        }
+    }
+
+    @include mq('mobile') {
+        margin-bottom: rem(53px);
+
+        &__text {
+            font-size: rem(30px);
+        }
+
+        &__name {
+            margin-top: rem(20px);
+        }
+    }
+}

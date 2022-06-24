@@ -1,0 +1,17 @@
+.footer-secondary-menu {
+    padding-top: rem(3px);
+
+    &__item {
+        display: block;
+        margin-bottom: rem(18px);
+    }
+
+    &__link {
+        color: $light;
+        line-height: 1.4;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

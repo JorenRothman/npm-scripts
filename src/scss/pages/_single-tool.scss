@@ -1,0 +1,60 @@
+.single-tool-header {
+    padding-top: rem(160px);
+    margin-bottom: rem(64px);
+
+    &__container {
+        @include grid(rem(585px) rem(547px), rem(100px), 0);
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__image-source {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    &__subtitle {
+        font-size: rem(18px);
+        line-height: 1.7777777778;
+        margin-bottom: rem(18px);
+    }
+
+    &__title {
+        max-width: rem(430px);
+        margin-bottom: rem(41px);
+    }
+
+    &__terms {
+        @include grid-even(2);
+        max-width: 362px;
+    }
+
+    @include mq('screen and (max-width: #{rem(1340px)})') {
+        &__container {
+            @include grid(1fr 1fr, rem(100px), 0);
+        }
+    }
+
+    @include mq('mobile') {
+        &__container {
+            @include grid(1fr, rem(40px), 0);
+        }
+
+        &__image {
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(600px)})') {
+        &__image {
+            max-width: 100%;
+        }
+    }
+}

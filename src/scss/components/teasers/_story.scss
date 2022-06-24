@@ -1,0 +1,66 @@
+.story {
+    position: relative;
+
+    &__image {
+        position: relative;
+        height: 312px;
+        display: flex;
+        border-radius: rem(4px);
+
+        &::after {
+            content: '';
+            display: block;
+            background: linear-gradient(180deg,
+            rgba(21, 123, 255, 0) 0%,
+            $blue-500 100%);
+            position: absolute;
+            width: 100%;
+            height: 129px;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+        border-radius: rem(4px);
+    }
+
+    &__terms {
+        @include grid-even(2);
+        margin-bottom: rem(18px);
+
+        .tag {
+            min-width: 0;
+        }
+    }
+
+    &__name {
+        margin-bottom: rem(8px);
+    }
+
+    &__link {
+        @include position-absolute-cover;
+    }
+
+    @include mq('tablet') {
+        &__terms {
+            margin-bottom: rem(13px);
+        }
+
+        &__name {
+            margin-bottom: rem(6px);
+        }
+    }
+
+    @include mq('mobile') {
+        &__terms {
+            margin-bottom: rem(12px);
+        }
+
+        &__name {
+            margin-bottom: rem(5px);
+        }
+    }
+}

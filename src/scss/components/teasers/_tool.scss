@@ -1,0 +1,112 @@
+.tool {
+    border: solid rem(2px) $blue-500;
+    border-radius: rem(4px);
+    padding: rem(33px) rem(39px) rem(32px);
+    position: relative;
+
+    &__image {
+        @include aspect-ratio(267, 270);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image-source {
+        object-fit: contain;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        margin-top: rem(-25px);
+    }
+
+    &__title {
+        margin-bottom: rem(11px);
+    }
+
+    &__people {
+        display: none;
+        margin-top: auto;
+
+        &--not-on-large {
+            position: absolute;
+            width: calc(100% - rem(60px));
+            top: rem(33px);
+            left: rem(39px);
+            z-index: 10;
+            display: block;
+        }
+    }
+
+    &__categories {
+        margin-bottom: rem(-9px);
+        margin-top: rem(16px);
+    }
+
+    &__category {
+        font-size: rem(14px);
+        font-weight: 900;
+        background-color: $orange-800;
+        color: $dark;
+        padding: rem(5px) rem(30px);
+        margin-right: rem(5px);
+        margin-bottom: rem(9px);
+        display: none;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            display: inline-block;
+        }
+    }
+
+    &__link {
+        @include position-absolute-cover;
+        z-index: 20;
+    }
+
+    @include mq('tablet') {
+        padding: rem(25px) rem(30px) rem(24px);
+
+        &__people {
+            &--not-on-large {
+                top: rem(25px);
+                left: rem(30px);
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        padding: rem(22px) rem(26px) rem(21px);
+
+        &__people {
+            &--not-on-large {
+                top: rem(22px);
+                left: rem(26px);
+            }
+        }
+    }
+}
+
+@mixin tool--large {
+    @include grid-even(2);
+
+    .tool__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .tool__people {
+        display: block;
+        margin-top: auto;
+    }
+
+    .tool__people--not-on-large {
+        display: none;
+    }
+
+    .tool__category {
+        display: inline-block;
+    }
+}

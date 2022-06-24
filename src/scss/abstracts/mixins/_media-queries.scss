@@ -1,0 +1,7 @@
+@mixin mq($media-query) {
+    $size: get-media-query-size($media-query);
+
+    @media #{$size} {
+        @content;
+    }
+}

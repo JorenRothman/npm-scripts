@@ -1,0 +1,44 @@
+@mixin placeholder {
+    &:input-placeholder {
+        @content;
+    }
+
+    &:placeholder {
+        @content;
+    }
+
+    &::placeholder {
+        @content;
+    }
+
+    &:input-placeholder {
+        @content;
+    }
+}
+
+@mixin select2-color($color) {
+    .select2 {
+        .select2-selection {
+            border: solid 1px $color;
+            background-color: $color;
+        }
+    }
+
+    .select2-dropdown {
+        border-color: $color;
+    }
+
+    .select2-results__option {
+        color: $dark;
+
+        &--selected {
+            background-color: $color !important;
+        }
+
+        &--highlighted,
+        &--selected {
+            background-color: $color !important;
+            color: $dark !important;
+        }
+    }
+}

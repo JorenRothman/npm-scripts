@@ -1,0 +1,419 @@
+.ambassador-header-top {
+    &__container {
+        @include grid(1fr 2fr);
+    }
+
+    &__cta {
+        @include aspect-ratio(551, 784);
+        position: relative;
+
+        .button {
+            @include button--color-orange;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        display: flex;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(180deg,
+            rgba(21, 123, 255, 0) 0%,
+            #157bff 100%);
+        }
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__content {
+        padding-top: rem(122px);
+        padding-left: rem(30px);
+        padding-bottom: rem(175px);
+        padding-right: rem(30px);
+    }
+
+    &__logo {
+        width: rem(264px);
+        margin-bottom: rem(34px);
+    }
+
+    &__title {
+        max-width: rem(754px);
+    }
+
+    &__buttons {
+        margin-top: rem(49px);
+        max-width: rem(754px);
+        margin-bottom: rem(-16px);
+
+        .button {
+            margin-right: rem(16px);
+            margin-bottom: rem(16px);
+
+            &:nth-child(2) {
+                @include button--color-green;
+            }
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(1250px)})') {
+        &__container {
+            @include grid(1.5fr 2fr);
+        }
+    }
+
+    @include mq('tablet') {
+        &__buttons {
+            margin-top: rem(37px);
+        }
+    }
+
+    @include mq('mobile') {
+        &__container {
+            @include grid(1fr);
+        }
+
+        &__cta {
+            @include aspect-ratio(551, 300);
+            order: 2;
+        }
+
+        &__content {
+            order: 1;
+            padding-bottom: rem(60px);
+            padding-left: rem(20px);
+            padding-right: rem(20px);
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__buttons {
+            margin-top: rem(32px);
+        }
+    }
+}
+
+.ambassador-header-middle {
+    margin-top: rem(-138px);
+
+    &__container {
+        @include grid(1fr 2fr);
+    }
+
+    &__cta {
+        @include aspect-ratio(932, 558);
+        position: relative;
+
+        .button {
+            @include button--color-orange;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        display: flex;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 90%;
+            background: linear-gradient(180deg,
+            rgba(255, 183, 142, 0) 0%,
+            #ffb78e 100%);
+        }
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__content {
+        padding-top: rem(170px);
+        padding-left: rem(35px);
+        padding-right: rem(35px);
+        padding-bottom: rem(175px);
+    }
+
+    &__logo {
+        width: rem(264px);
+        margin-bottom: rem(34px);
+    }
+
+    &__title {
+        max-width: rem(754px);
+        margin-bottom: rem(42px);
+    }
+
+    &__buttons {
+        margin-top: rem(49px);
+        max-width: rem(754px);
+    }
+
+    @include mq('screen and (max-width: #{rem(1250px)})') {
+        &__container {
+            @include grid(1.5fr 2fr);
+        }
+
+        &__buttons {
+            margin-top: rem(42px);
+        }
+    }
+
+    @include mq('tablet') {
+        &__buttons {
+            margin-top: rem(37px);
+        }
+    }
+
+    @include mq('mobile') {
+        margin-top: 0;
+
+        &__container {
+            @include grid(1fr);
+        }
+
+        &__cta {
+            @include aspect-ratio(551, 300);
+            order: 2;
+        }
+
+        &__content {
+            order: 1;
+            padding: rem(40px) rem(20px);
+        }
+
+        &__buttons {
+            margin-top: rem(32px);
+        }
+    }
+}
+
+.ambassador-header-bottom {
+    // margin-top: rem(-138px);
+    margin-left: auto;
+    max-width: rem(1000px);
+
+    &__container {
+        @include grid(1fr 1fr);
+    }
+
+    &__cta {
+        @include aspect-ratio(932, 558);
+        position: relative;
+
+        .button {
+            @include button--color-orange;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        display: flex;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(180deg,
+            rgba(0, 217, 156, 0) 0%,
+            #00d99c 100%);
+            border-radius: 4px 4px 0 0;
+        }
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__content {
+        padding-top: rem(170px);
+        padding-left: rem(35px);
+        padding-right: rem(35px);
+        padding-bottom: rem(175px);
+    }
+
+    &__logo {
+        width: rem(264px);
+        margin-bottom: rem(34px);
+    }
+
+    &__title {
+        max-width: rem(754px);
+        margin-bottom: rem(42px);
+    }
+
+    &__buttons {
+        margin-top: rem(49px);
+        max-width: rem(754px);
+
+        .button {
+            @include button--color-green;
+        }
+    }
+
+    @include mq('tablet') {
+        margin-top: rem(37px);
+    }
+
+    @include mq('mobile') {
+        margin-top: 0;
+
+        &__container {
+            @include grid(1fr);
+        }
+
+        &__buttons {
+            margin-top: rem(32px);
+        }
+
+        &__cta {
+            @include aspect-ratio(551, 300);
+            order: 2;
+        }
+
+        &__content {
+            order: 1;
+            padding: rem(40px) rem(20px);
+        }
+    }
+}
+
+.ambassador-content {
+    &__container {
+        @include grid(1fr 1fr, rem(130px));
+        align-items: flex-start;
+    }
+
+    &__cta {
+        @include aspect-ratio(705, 558);
+        position: relative;
+
+        .button {
+            @include button--color-orange;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        display: flex;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(180deg,
+            rgba(255, 189, 253, 0) 0%,
+            #ffbdfd 100%);
+            border-radius: 4px 4px 0 0;
+        }
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__content {
+        padding-top: rem(102px);
+    }
+
+    &__content-group {
+        margin-bottom: rem(104px);
+
+        &:last-child {
+            margin-bottom: rem(0);
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(30px);
+    }
+
+    &__text {
+        max-width: rem(400px);
+    }
+
+    &__buttons {
+        margin-top: rem(49px);
+    }
+
+    @include mq('tablet') {
+        margin-top: rem(37px);
+
+        &__buttons {
+            margin-top: rem(37px);
+        }
+
+        &__content {
+            padding-top: rem(78px);
+        }
+    }
+
+    @include mq('mobile') {
+        margin-top: 0;
+
+        &__container {
+            @include grid(1fr);
+        }
+
+        &__cta {
+            @include aspect-ratio(551, 300);
+            order: 2;
+        }
+
+        &__content {
+            order: 1;
+            padding: rem(40px) rem(20px);
+        }
+
+        &__buttons {
+            margin-top: rem(32px);
+        }
+
+        &__content-group {
+            margin-bottom: rem(40px);
+
+            &:last-child {
+                margin-bottom: rem(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.button {
+    @include button--color-blue;
+    @include button;
+}
+
+.button--size-s {
+    @include button--size-s;
+
+    &.button--has-arrow {
+        @include button--size-s(true);
+    }
+}
+
+.button--size-m {
+    @include button--size-m;
+
+    &.button--has-arrow {
+        @include button--size-m(true);
+    }
+}
+
+.button--size-l {
+    @include button--size-l;
+
+    &.button--has-arrow {
+        @include button--size-l(true);
+    }
+}
+
+.button--text-only {
+    @include button--color-white;
+    @include button--text-only;
+}
+
+.button--border-radius-m {
+    @include button--border-radius(4px);
+}
+
+.facetwp-hidden {
+    display: none !important;
+}

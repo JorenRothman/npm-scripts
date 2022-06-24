@@ -1,0 +1,136 @@
+@include font-face('Avenir', 'Avenir-Book');
+@include font-face('Avenir', 'Avenir-Medium', 500);
+@include font-face('Avenir', 'Avenir-Light', 300);
+@include font-face('Avenir Next Condensed', 'AvenirNextCondensed-Bold', 700);
+@include font-face('Avenir Next Condensed', 'AvenirNextCondensed-Heavy', 800);
+@include font-face('Avenir', 'Avenir-Heavy', 800);
+@include font-face('Avenir', 'Avenir-Black', 900);
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $avenir;
+    color: $blue-500;
+}
+
+.title--size-huge {
+    @include font-style-title-huge;
+}
+
+.title--size-1 {
+    @include font-style-title-1;
+}
+
+.title--size-2 {
+    @include font-style-title-2;
+}
+
+.title--size-3 {
+    @include font-style-title-3;
+}
+
+.title--size-5 {
+    @include font-style-title-5;
+}
+
+.paragraph-styles {
+    @include font-style-paragraph-default;
+
+    h1 {
+        @include font-style-title-1;
+    }
+
+    h2 {
+        @include font-style-title-2;
+    }
+
+    h3 {
+        @include font-style-title-3;
+        margin-bottom: em(18px, 22px);
+        margin-top: em(52px, 22px);
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h4,
+    h5,
+    h6 {
+        @include font-style-title-5;
+    }
+
+    p,
+    ul,
+    form,
+    iframe {
+        margin-bottom: em(30px, 16px);
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p,
+    li {
+        @include font-style-paragraph-default;
+    }
+
+    a:not(.button) {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        padding-left: rem(20px);
+    }
+
+    li {
+        list-style: disc;
+    }
+}
+
+.paragraph-styles--size-small,
+p.paragraph-styles--size-small {
+    @include font-style-paragraph-small;
+
+    p,
+    li {
+        @include font-style-paragraph-small;
+    }
+}
+
+.paragraph-styles--size-big,
+p.paragraph-styles--size-big {
+    @include font-style-paragraph-big;
+
+    p,
+    li {
+        @include font-style-paragraph-big;
+    }
+}
+
+.paragraph-styles--size-medium,
+p.paragraph-styles--size-medium {
+    @include font-style-medium;
+
+    p,
+    li {
+        @include font-style-medium;
+    }
+}
+
+.text--size-label {
+    @include font-style-label;
+}
+
+.text--size-caption {
+    @include font-style-caption;
+}

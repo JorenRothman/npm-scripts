@@ -1,0 +1,110 @@
+.cta-with-image {
+    margin: rem(53px) 0;
+
+    &__container {
+        @include grid(2fr 3fr, 0, 0);
+    }
+
+    &__image-outer {
+        position: relative;
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        display: flex;
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__content {
+        @include grid(3.3fr 2fr, 0, 0);
+        background-color: $blue-500;
+        color: $light;
+        padding: rem(41px) rem(31px);
+        align-items: flex-end;
+    }
+
+    &__text {
+        padding-right: rem(30px);
+
+        .paragraph-style {
+            max-width: rem(340px);
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(29px);
+    }
+
+    &__buttons {
+        text-align: right;
+
+        .button {
+            @include button--color-white-ghost;
+            margin-top: rem(25px);
+
+            &:first-child {
+                @include button--color-white;
+                margin-top: auto;
+            }
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(1200px)})') {
+        &__content {
+            @include grid-even(1, rem(30px));
+        }
+
+        &__buttons {
+            text-align: left;
+            margin-top: rem(-10px);
+
+            .button {
+                margin-top: rem(10px);
+                margin-right: rem(20px);
+            }
+        }
+    }
+
+    @include mq('tablet') {
+        margin: rem(40px) 0;
+
+        &__content {
+            padding: rem(31px) rem(31px);
+        }
+
+        &__title {
+            margin-bottom: rem(22px);
+        }
+
+        &__text {
+            padding-right: 0;
+        }
+    }
+
+    @include mq('mobile') {
+        margin: rem(35px) 0;
+
+        &__content {
+            padding: rem(31px) rem(20px);
+        }
+
+        &__title {
+            margin-bottom: rem(19px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(1200px)})') {
+        &__container {
+            @include grid-even(1);
+        }
+
+        &__image {
+            height: rem(250px);
+            position: relative;
+        }
+    }
+}

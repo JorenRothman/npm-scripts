@@ -1,0 +1,44 @@
+.organisation-signup {
+    margin: rem(78px) 0;
+
+    &__container {
+        background-color: $orange-800;
+        color: $light;
+        padding: rem(68px) rem(95px) rem(111px);
+    }
+
+    &__title {
+        max-width: rem(307px);
+        margin-bottom: rem(12px);
+    }
+
+    &__inner {
+        @include grid(3fr 2fr, rem(34px), 0);
+        align-items: flex-end;
+    }
+
+    @include mq('tablet') {
+        &__container {
+            padding: rem(52px) rem(40px) rem(62px);
+        }
+
+        &__inner {
+            @include grid(300px auto, rem(40px), 0);
+            align-items: flex-start;
+        }
+    }
+
+    @include mq('mobile') {
+        &__container {
+            padding: rem(33px) rem(20px) rem(38px);
+        }
+
+        &__inner {
+            @include grid-even(1);
+        }
+
+        &__content {
+            margin-bottom: rem(30px);
+        }
+    }
+}

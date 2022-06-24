@@ -1,0 +1,182 @@
+.site-footer {
+    display: block;
+    color: $light;
+
+    &__main {
+        background-color: $blue-500;
+        padding: rem(72px) 0 rem(62px);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        width: calc(100% + rem(75px));
+    }
+
+    &__column {
+        min-width: rem(273px);
+        margin-right: rem(117px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        // width: 100%;
+        max-width: rem(360px);
+        padding-left: rem(20px);
+    }
+
+    &__menus {
+        @include grid-even(2, 50px, 0);
+        min-width: rem(360px);
+        // width: 100%;
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__socials {
+        display: flex;
+        margin-top: auto;
+    }
+
+    &__social {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(39px);
+        height: rem(39px);
+        margin-right: rem(40px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__logos {
+        @include grid-even(2, 25px, 20px);
+        max-width: rem(318px);
+        margin-top: rem(32px);
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__disclaimer {
+        background-color: $orange-800;
+        font-weight: 700;
+        padding: rem(12px) 0 rem(13px);
+    }
+
+    &__disclaimer-container {
+        display: flex;
+    }
+
+    &__copyright {
+        margin-left: auto;
+    }
+
+    @include mq('screen and (max-width: #{rem(1350px)})') {
+        &__container {
+            width: 100%;
+        }
+    }
+
+    @include mq('tablet') {
+        &__main {
+            padding: rem(55px) 0 rem(47px);
+        }
+
+        &__column {
+            min-width: rem(200px);
+            max-width: rem(200px);
+            margin-right: rem(60px);
+        }
+
+        &__menus {
+            @include grid-even(1, 50px, 0);
+            min-width: rem(200px);
+        }
+
+        &__social {
+            width: rem(25px);
+            height: rem(25px);
+            margin-right: rem(25px);
+        }
+    }
+
+    @include mq('mobile') {
+        &__main {
+            padding: rem(48px) 0 rem(41px);
+        }
+
+        &__container {
+            flex-flow: row wrap;
+        }
+
+        &__column {
+            @include grid-even(2, rem(30px), 0);
+            max-width: 100%;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: rem(30px);
+        }
+
+        &__logo {
+            max-width: rem(200px);
+        }
+
+        &__socials {
+            margin-top: rem(17px);
+        }
+
+        &__menus {
+            @include grid-even(2, 30px, 0);
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &__content {
+            padding-left: 0;
+            margin-top: rem(40px);
+            max-width: 100%;
+        }
+
+        &__logos {
+            max-width: rem(500px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(680px)})') {
+        &__disclaimer-container {
+            flex-flow: row wrap;
+            text-align: center;
+        }
+
+        .footer-legal-menu {
+            width: 100%;
+            margin-bottom: rem(5px);
+        }
+
+        .footer-legal-menu__item {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__copyright {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(500px)})') {
+        &__column {
+            @include grid-even(1, 0, 0);
+        }
+
+        &__menus {
+            @include grid-even(1, 0, 0);
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.index-alphabet-filter {
+    padding: rem(79px) 0;
+    background-color: $orange-800;
+
+    .facetwp-facet {
+        margin: 0;
+    }
+
+    .facetwp-radio {
+        @include font-style-title-1;
+        font-size: rem(40px);
+        background-image: none;
+        padding: 0;
+        display: inline-flex;
+        height: rem(44px);
+        width: rem(44px);
+        text-transform: uppercase;
+        border: solid 2px transparent;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &:first-child {
+            display: none;
+        }
+
+        &.checked {
+            background-image: none;
+            border: solid 2px $blue-500;
+        }
+
+        .facetwp-counter {
+            display: none;
+        }
+    }
+
+    @include mq('tablet') {
+        padding: rem(60px) 0;
+    }
+
+    @include mq('mobile') {
+        padding: rem(52px) 0;
+    }
+}
+
+.index-overview {
+    &__items {
+        padding-top: rem(52px);
+    }
+
+    &__group {
+        @include grid(1fr rem(460px), rem(98px));
+        margin-bottom: rem(92px);
+    }
+
+    &__group-column {
+        position: relative;
+    }
+
+    &__group-letter {
+        position: absolute;
+        left: rem(40px);
+        top: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .index {
+        margin-bottom: rem(24px);
+    }
+
+    &__group-image {
+        width: 100%;
+    }
+
+    @include mq('tablet') {
+        &__group {
+            @include grid(1fr rem(460px), rem(48px));
+            margin-bottom: rem(70px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(850px)})') {
+        &__group {
+            @include grid(1fr, rem(28px));
+            margin-bottom: rem(61px);
+        }
+
+        &__group-image {
+            display: none;
+        }
+
+        &__group-letter {
+            position: relative;
+            left: 0;
+        }
+    }
+}

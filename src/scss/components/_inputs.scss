@@ -1,0 +1,197 @@
+.label--hidden {
+    @include visually-hidden;
+}
+
+.label--consent {
+    @include grid(rem(20px) auto, rem(20px));
+    color: $light;
+}
+
+.input {
+    display: block;
+    width: 100%;
+}
+
+.input--text {
+    @include placeholder {
+        color: $blue-500;
+        font-weight: 900;
+    }
+
+    padding: em(14px, 18px) em(24px, 18px) em(10px, 18px);
+    background-color: $light;
+    font-size: rem(18px);
+    line-height: 1.7777777778;
+    color: $blue-500;
+    font-weight: 900;
+    border-bottom: em(4px, 18px) solid transparent;
+
+    @include mq('tablet') {
+        font-size: rem(17px);
+    }
+
+    @include mq('mobile') {
+        font-size: rem(16px);
+    }
+}
+
+.input--is-invalid {
+    border-color: $danger-colour;
+}
+
+.input--submit {
+    @include button;
+    @include button--size-l;
+    @include button--color-blue;
+    font-size: rem(16px);
+    padding: em(15px, 16px) em(51px, 16px);
+    position: relative;
+
+    span {
+        transition: opacity 100ms ease-out;
+        display: inline-block;
+        transition-delay: 150ms;
+    }
+
+    .gg-spinner {
+        position: absolute;
+        pointer-events: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 150ms ease-out;
+    }
+
+    &.is-loading {
+        span {
+            transition-delay: 0s;
+            opacity: 0;
+        }
+
+        .gg-spinner {
+            transition-delay: 150ms;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    @include mq('tablet') {
+        font-size: rem(14px);
+    }
+}
+
+.input--checkbox {
+    display: none;
+
+    &:checked {
+        ~ .checkbox-replacement {
+            background-color: $blue-500;
+        }
+    }
+
+    &.input--is-invalid {
+        ~ .checkbox-replacement {
+            border-color: $danger-colour;
+        }
+    }
+}
+
+.checkbox-replacement {
+    height: 25px;
+    width: 25px;
+    border: solid 3px $light;
+    background-color: $light;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.input--margin-bottom-m {
+    margin-bottom: rem(26px);
+}
+
+.input--size-s {
+    max-width: rem(264px);
+}
+
+.input--size-xs {
+    max-width: rem(163px);
+    padding: em(15px, 16px) em(21px, 16px);
+}
+
+.select2 {
+    width: 100% !important;
+
+    .select2-selection {
+        border: solid 1px $dark;
+        border-radius: 0;
+    }
+
+    .select2-selection__rendered {
+        line-height: 1 !important;
+        font-size: rem(20px);
+        font-weight: 900;
+        color: $dark !important;
+        padding: em(19px, 20px) em(18px, 20px) em(21px, 20px) !important;
+    }
+
+    .select2-selection--single,
+    .select2-selection__arrow {
+        height: rem(60px) !important;
+
+        b {
+            display: none !important;
+        }
+    }
+
+    .select2-selection__arrow {
+        background-image: url('../img/chevron-select.svg');
+        background-size: rem(14px) auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: rem(40px) !important;
+    }
+
+    @include mq('tablet') {
+        .select2-selection__rendered {
+            font-size: rem(16px);
+            padding: em(22px, 20px) em(18px, 20px) em(21px, 20px) !important;
+        }
+
+        .select2-selection--single,
+        .select2-selection__arrow {
+            height: rem(53px) !important;
+        }
+    }
+
+    @include mq('mobile') {
+        .select2-selection__rendered {
+            font-size: rem(14px);
+        }
+
+        .select2-selection--single,
+        .select2-selection__arrow {
+            height: rem(46px) !important;
+        }
+    }
+}
+
+.select2-dropdown {
+    border-color: $dark;
+}
+
+.select2-results__option {
+    background-color: $light;
+    color: $dark;
+    padding-left: rem(18px);
+    padding-right: rem(18px);
+    font-weight: 500;
+
+    &--selected {
+        background-color: $dark !important;
+    }
+
+    &--highlighted,
+    &--selected {
+        background-color: $dark !important;
+        color: $light !important;
+    }
+}

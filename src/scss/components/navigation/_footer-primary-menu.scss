@@ -1,0 +1,15 @@
+.footer-primary-menu {
+    &__item {
+        display: block;
+        margin-bottom: rem(18px);
+    }
+
+    &__link {
+        color: $light;
+        font-weight: 700;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.stories {
+    margin: rem(80px) 0;
+
+    &__title {
+        margin-bottom: rem(30px);
+    }
+
+    &__items {
+        @include grid-even(3, rem(30px), rem(56px));
+    }
+
+    @include mq('tablet') {
+        margin: rem(61px) 0;
+    }
+
+    @include mq('screen and (max-width: #{rem(900px)})') {
+        &__title {
+            margin-bottom: rem(23px);
+        }
+
+        &__items {
+            @include grid-even(2, rem(30px));
+        }
+
+        .story {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        margin: rem(53px) 0;
+
+        &__title {
+            margin-bottom: rem(20px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(500px)})') {
+        &__items {
+            @include grid-even(1, rem(30px));
+        }
+    }
+}

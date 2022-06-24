@@ -1,0 +1,4 @@
+@function get-icon-example($fill: $dark) {
+    $content: '<path d="m10 17v2h-2v-2zm2-2v2h-2v-2zm2-2v2h-2v-2zm2-2v2h-2v-2zm-2-2v2h-2v-2zm-2-2v2h-2v-2zm-2-2v2h-2v-2z" fill="#{$fill}" fill-rule="evenodd" transform="matrix(0 1 -1 0 19 -8)"/>';
+    @return get-svg($content, '0 0 14 8');
+}

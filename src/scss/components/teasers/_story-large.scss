@@ -1,0 +1,69 @@
+.story-large {
+    @include grid(3fr 2fr, rem(30px), 0);
+    position: relative;
+
+    &__image {
+        position: relative;
+        height: rem(640px);
+        display: flex;
+        border-radius: rem(4px);
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+        border-radius: rem(4px);
+    }
+
+    &__quote {
+        margin-bottom: rem(25px);
+    }
+
+    &__terms {
+        @include grid-even(2);
+        margin-top: rem(30px);
+        max-width: rem(362px);
+    }
+
+    &__name {
+        margin-bottom: rem(8px);
+    }
+
+    &__link {
+        @include position-absolute-cover;
+    }
+
+    @include mq('tablet') {
+        &__quote {
+            margin-bottom: rem(19px);
+        }
+
+        &__terms {
+            margin-top: rem(23px);
+        }
+
+        &__name {
+            margin-bottom: rem(6px);
+        }
+    }
+
+    @include mq('mobile') {
+        @include grid(1fr, rem(30px));
+
+        &__image {
+            height: rem(400px);
+        }
+
+        &__quote {
+            margin-bottom: rem(16px);
+        }
+
+        &__terms {
+            margin-top: rem(20px);
+        }
+
+        &__name {
+            margin-bottom: rem(5px);
+        }
+    }
+}

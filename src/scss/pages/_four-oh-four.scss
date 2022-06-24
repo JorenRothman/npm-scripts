@@ -1,0 +1,11 @@
+.four-oh-four {
+    padding: rem(300px) 0;
+
+    .paragraph-styles {
+        max-width: rem(460px);
+    }
+
+    @include mq('mobile') {
+        padding: rem(150px) 0 rem(100px);
+    }
+}

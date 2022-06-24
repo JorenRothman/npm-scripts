@@ -1,0 +1,136 @@
+// Change text colour due to readability issues
+.page-template-story-overview {
+    .header-one,
+    .organisation-signup__container {
+        color: $blue-500;
+    }
+}
+
+.story-overview {
+    .header-one {
+        @include header-one--size-m;
+        margin-bottom: rem(38px);
+    }
+
+    // Temorary disabled filters
+    .story-overview-filters {
+        display: none;
+    }
+
+    &__highlighted {
+        @include grid(1fr rem(1145px) 1fr);
+        margin-bottom: rem(92px);
+        margin-top: rem(70px);
+
+        // Temporary increase due to hidden filters
+        margin-top: rem(120px);
+
+        .has-active-filters & {
+            display: none;
+        }
+    }
+
+    &__items {
+        @include grid-even(3, rem(30px), rem(56px));
+        margin-bottom: rem(90px);
+        margin-top: rem(92px);
+    }
+
+    // .story {
+    //     &:nth-child(1) {
+    //         display: none;
+
+    //         .has-active-filters & {
+    //             display: block;
+    //         }
+    //     }
+    // }
+
+    .story-large {
+        grid-column: auto / span 2;
+    }
+
+    &__buttons {
+        text-align: center;
+
+        .facetwp-load-more {
+            @include button;
+            @include button--color-blue;
+            @include button--size-s;
+            margin: 0;
+        }
+
+        .facetwp-facet-loadmore {
+            margin-bottom: rem(91px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(1170px)})') {
+        &__highlighted {
+            @include grid(1fr rem(900px) 1fr);
+        }
+    }
+
+    @include mq('tablet') {
+        .header-one {
+            margin-bottom: rem(29px);
+        }
+
+        &__highlighted {
+            @include grid(1fr 1fr rem(40px));
+            margin-bottom: rem(70px);
+            margin-top: rem(53px);
+        }
+
+        &__items {
+            @include grid-even(3, rem(30px), rem(56px));
+            margin-bottom: rem(69px);
+            margin-top: rem(70px);
+        }
+
+        &__buttons {
+            .facetwp-facet-loadmore {
+                margin-bottom: rem(70px);
+            }
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(900px)})') {
+        &__items {
+            @include grid(1fr 1fr, rem(30px));
+        }
+    }
+
+    @include mq('mobile') {
+        .header-one {
+            margin-bottom: rem(25px);
+        }
+
+        &__highlighted {
+            @include grid(rem(20px) 1fr rem(20px));
+            margin-bottom: rem(61px);
+            margin-top: rem(46px);
+        }
+
+        .story-large {
+            grid-column: 2 / span 1;
+        }
+
+        &__items {
+            margin-bottom: rem(60px);
+            margin-top: rem(61px);
+        }
+
+        &__buttons {
+            .facetwp-facet-loadmore {
+                margin-bottom: rem(60px);
+            }
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(660px)})') {
+        &__items {
+            @include grid(1fr, rem(30px));
+        }
+    }
+}

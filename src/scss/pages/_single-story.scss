@@ -1,0 +1,145 @@
+.single-story-header {
+    padding-top: rem(119px);
+    padding-bottom: rem(65px);
+
+    &__container {
+        @include grid(1fr 1fr, rem(200px), 0);
+        align-items: flex-end;
+    }
+
+    &__image-source {
+        width: 100%;
+    }
+
+    &__terms {
+        @include grid-even(2);
+        max-width: 362px;
+    }
+
+    @include mq('tablet') {
+        padding-bottom: rem(50px);
+
+        &__container {
+            @include grid(1fr 1fr, rem(50px), 0);
+        }
+    }
+
+    @include mq('mobile') {
+        padding-bottom: rem(43px);
+
+        &__container {
+            @include grid(1fr, rem(50px), 0);
+        }
+
+        &__title {
+            margin-top: rem(15px);
+        }
+
+        &__terms {
+            margin-top: rem(15px);
+            padding-left: rem(20px);
+        }
+    }
+}
+
+.single-story-reference {
+    @include grid(3.2fr 4fr);
+    color: $light;
+    margin-top: rem(155px);
+
+    &__group {
+        @include grid-even(2, rem(30px));
+        background-color: $green-400;
+        padding: rem(39px);
+
+        &:nth-child(2) {
+            background-color: $pink-900;
+        }
+    }
+
+    &__group-list {
+        padding-top: rem(5px);
+    }
+
+    &__group-item {
+        margin-bottom: rem(15px);
+    }
+
+    &__group-link {
+        display: flex;
+        align-items: center;
+
+        .button__arrow {
+            margin-left: auto;
+        }
+    }
+
+    &__next {
+        position: relative;
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        background-color: $blue-500;
+        display: flex;
+    }
+
+    &__image-source {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .button {
+        @include button--color-orange;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    @include mq('tablet') {
+        @include grid-even(2);
+        margin-top: rem(119px);
+
+        &__group {
+            padding: rem(30px);
+        }
+
+        &__group-list {
+            padding-top: rem(4px);
+        }
+
+        &__group-item {
+            margin-bottom: rem(11px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(850px)})') {
+        @include grid-even(1);
+
+        &__next {
+            @include aspect-ratio(400, 200);
+        }
+    }
+
+    @include mq('mobile') {
+        margin-top: rem(103px);
+
+        &__group {
+            padding: rem(26px) rem(20px) rem(17px);
+        }
+
+        &__group-list {
+            padding-top: rem(3px);
+        }
+
+        &__group-item {
+            margin-bottom: rem(10px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(600px)})') {
+        &__group {
+            @include grid-even(1, rem(10px));
+        }
+    }
+}

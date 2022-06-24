@@ -1,0 +1,36 @@
+@import 'abstracts/abstracts';
+
+// Contains any third-party stylesheets the site uses
+@import 'vendor/reset';
+@import 'vendor/css-gg';
+@import 'swiper/swiper-bundle';
+@import 'select2/dist/css/select2';
+@import 'locomotive-scroll/src/locomotive-scroll';
+
+// Contains boilerplate used throughout an entire site
+@import 'base/global';
+@import 'base/typography';
+
+// Contains styles for different aspects of the site's structural layout
+@import 'layout/container';
+@import 'layout/grid';
+@import 'layout/form';
+@import 'layout/header';
+@import 'layout/footer';
+
+// Are like "mini" layouts, Styles for small, reusable pieces of the site should reside here
+@import 'components/buttons';
+@import 'components/gravityforms';
+@import 'components/tags';
+@import 'components/inputs';
+@import 'components/navigation';
+@import 'components/cta';
+@import 'components/sliders';
+@import 'components/teasers';
+@import 'components/relational';
+@import 'components/content';
+@import 'components/features';
+@import 'components/header';
+
+// Is where page-specific styles reside
+@import 'pages';

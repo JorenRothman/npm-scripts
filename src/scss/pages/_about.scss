@@ -1,0 +1,319 @@
+.about-header {
+    background-color: $orange-800;
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/preloader.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__mobile-image {
+        display: none;
+    }
+
+    @include mq('tablet') {
+        min-height: 0;
+        padding-top: rem(65px);
+
+        &__scroll-bound {
+            display: none;
+        }
+
+        &__mobile-image {
+            display: block;
+        }
+    }
+}
+
+.about-statistics {
+    background-color: $blue-500;
+    padding: rem(164px) 0 rem(75px);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-statistic {
+        color: $light;
+        margin-bottom: rem(56px);
+
+        &__title {
+            max-width: rem(484px);
+            margin-bottom: rem(45px);
+        }
+
+        &__text {
+            max-width: rem(420px);
+        }
+
+        &:nth-child(2n) {
+            margin-left: auto;
+        }
+    }
+
+    @include mq('mobile') {
+        padding: rem(164px) 0 rem(50px);
+
+        .about-statistic {
+            &__title {
+                max-width: rem(200px);
+                margin-bottom: rem(30px);
+            }
+
+            &__text {
+                max-width: rem(300px);
+            }
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(420px)})') {
+        .about-statistic__title {
+            font-size: rem(49px);
+        }
+    }
+}
+
+.about-horizontal-texts {
+    background-color: $blue-500;
+    overflow: hidden;
+
+    &__container {
+        padding: 0 rem(0) rem(262px);
+        display: flex;
+    }
+
+    &__swiper {
+        // overflow: visible;
+    }
+
+    .about-horizontal-text {
+        color: $light;
+        width: 100%;
+        padding: 0 rem(34px);
+
+        &__title {
+            font-size: rem(50px);
+            line-height: 1.3333333333;
+            letter-spacing: 1.6666666667%;
+        }
+    }
+
+    @include mq('tablet') {
+        &__container {
+            padding: 0 rem(0) rem(201px);
+        }
+
+        .about-horizontal-text {
+            &__title {
+                font-size: rem(46px);
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        &__container {
+            padding: 0 rem(0) rem(100px);
+        }
+
+        .about-horizontal-text {
+            padding: 0 rem(20px);
+
+            &__title {
+                font-size: rem(30px);
+            }
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(500px)})') {
+        .about-horizontal-text {
+            &__title {
+                font-size: rem(20px);
+            }
+        }
+    }
+}
+
+.about-what-we-do {
+    padding: rem(117px) 0 rem(75px);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: rem(74px);
+    }
+
+    .about-what-we-do-item {
+        margin-bottom: rem(56px);
+        max-width: 500px;
+
+        &__image {
+            display: block;
+            margin-bottom: rem(74px);
+        }
+
+        &__title {
+            max-width: rem(264px);
+            margin-bottom: rem(20px);
+        }
+
+        &__index {
+            font-weight: 700;
+        }
+
+        &__text {
+            max-width: rem(420px);
+        }
+
+        &__content {
+            @include grid(rem(100px) auto, 0, 0);
+        }
+
+        .button {
+            margin-top: rem(30px);
+        }
+
+        &:nth-child(odd) {
+            margin-left: auto;
+        }
+    }
+
+    @include mq('tablet') {
+        padding: rem(90px) 0 rem(57px);
+
+        &__title {
+            margin-bottom: rem(57px);
+        }
+
+        .about-what-we-do-item {
+            &__image {
+                margin-bottom: rem(56px);
+            }
+
+            &__title {
+                margin-bottom: rem(15px);
+            }
+
+            .button {
+                margin-top: rem(23px);
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        padding: rem(78px) 0 rem(50px);
+
+        &__title {
+            margin-bottom: rem(49px);
+        }
+
+        .about-what-we-do-item {
+            &__image {
+                margin-bottom: rem(49px);
+            }
+
+            &__title {
+                max-width: rem(200px);
+                margin-bottom: rem(20px);
+            }
+
+            &__text {
+                max-width: rem(300px);
+            }
+
+            .button {
+                margin-top: rem(20px);
+            }
+
+            &__content {
+                @include grid(rem(60px) auto, 0, 0);
+            }
+        }
+    }
+}
+
+.about-what-we-dont-do {
+    padding: rem(78px) 0 rem(50px);
+    background-color: $pink-900;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: rem(74px);
+    }
+
+    .cta-with-referral {
+        border: solid 2px $blue-500;
+        margin: rem(70px) 0 rem(120px);
+    }
+
+    .about-what-we-dont-do-item {
+        margin-bottom: rem(56px);
+        max-width: 500px;
+
+        &__image {
+            display: block;
+            margin-bottom: rem(74px);
+        }
+
+        &__title {
+            max-width: rem(264px);
+            margin-bottom: rem(20px);
+        }
+
+        &__index {
+            font-weight: 700;
+        }
+
+        &__text {
+            max-width: rem(420px);
+        }
+
+        &__content {
+            @include grid(rem(100px) auto, 0, 0);
+        }
+
+        .button {
+            margin-top: rem(30px);
+        }
+
+        &:nth-child(even) {
+            margin-left: auto;
+        }
+    }
+
+    @include mq('tablet') {
+        padding: rem(60px) 0 rem(38px);
+
+        &__title {
+            margin-bottom: rem(56px);
+        }
+
+        .cta-with-referral {
+            margin: rem(53px) 0 rem(92px);
+
+            &__container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        padding: rem(52px) 0 rem(33px);
+
+        &__title {
+            margin-bottom: rem(49px);
+        }
+
+        .cta-with-referral {
+            margin: rem(46px) 0 rem(80px);
+        }
+    }
+}

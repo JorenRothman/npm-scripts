@@ -1,0 +1,41 @@
+.wysiwyg {
+    margin: rem(73px) 0;
+
+    &__container {
+        @include grid(auto rem(264px), rem(130px), 0);
+    }
+
+    &__sidebar-title {
+        margin-bottom: rem(15px);
+    }
+
+    .link-card {
+        margin-bottom: rem(28px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include mq('tablet') {
+        margin: rem(56px) 0;
+
+        &__container {
+            @include grid(auto rem(264px), rem(60px), 0);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(860px)})') {
+        &__container {
+            @include grid(1fr);
+        }
+
+        &__sidebar {
+            margin-top: rem(30px);
+        }
+    }
+
+    @include mq('mobile') {
+        margin: rem(48px) 0;
+    }
+}

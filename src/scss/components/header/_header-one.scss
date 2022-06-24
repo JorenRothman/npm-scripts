@@ -1,0 +1,120 @@
+.header-one {
+    padding: rem(183px) 0 rem(109px);
+    color: $light;
+
+    &__container {
+        @include grid(rem(405px) auto, rem(180px), 0);
+    }
+
+    &__title {
+        padding-left: rem(10px);
+        max-width: rem(405px);
+    }
+
+    &__text {
+        max-width: rem(458px);
+    }
+
+    &__buttons {
+        margin-bottom: rem(-20px);
+
+        .button {
+            display: inline-block;
+            margin-bottom: rem(20px);
+        }
+    }
+
+    @include mq('tablet') {
+        padding: rem(183px) 0 rem(83px);
+
+        &__container {
+            @include grid(rem(405px) auto, rem(30px), 0);
+        }
+    }
+
+    @include mq('mobile') {
+        padding: rem(183px) 0 rem(72px);
+
+        &__container {
+            @include grid(auto, rem(30px), 0);
+        }
+
+        &__title {
+            padding-left: 0;
+            margin-bottom: rem(16px);
+        }
+
+        &__buttons {
+            margin-top: rem(20px);
+        }
+    }
+}
+
+.header-one--color-orange {
+    background-color: $orange-800;
+}
+
+.header-one--color-light-orange {
+    background-color: rgba($orange-800, 0.61);
+}
+
+.header-one--color-blue {
+    background-color: $blue-500;
+}
+
+.header-one--color-green {
+    background-color: $green-400;
+}
+
+.header-one--color-pink {
+    background-color: $pink-900;
+}
+
+.header-one--color-white {
+    color: $blue-500;
+}
+
+.header-one--color-light-pink {
+    background-color: rgba($pink-900, 0.61);
+}
+
+@mixin header-one--size-s {
+    &__title {
+        max-width: rem(150px);
+        padding-left: 0;
+    }
+
+    @include mq('tablet') {
+        &__container {
+            @include grid(rem(300px) auto, rem(30px), 0);
+        }
+    }
+
+    @include mq('mobile') {
+        &__container {
+            @include grid(auto, rem(30px), 0);
+        }
+    }
+}
+
+@mixin header-one--size-m {
+    &__container {
+        @include grid(rem(339px) auto, rem(180px), 0);
+    }
+
+    &__title {
+        max-width: rem(339px);
+    }
+
+    @include mq('tablet') {
+        &__container {
+            @include grid(rem(405px) auto, rem(30px), 0);
+        }
+    }
+
+    @include mq('mobile') {
+        &__container {
+            @include grid(auto, rem(30px), 0);
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.title-and-wysiwyg {
+    padding: rem(135px) 0 rem(115px);
+    background-color: $blue-500;
+    color: $light;
+
+    &__container {
+        @include grid(rem(300px) auto, rem(180px), 0);
+    }
+
+    &__title {
+        padding-left: rem(10px);
+    }
+
+    &__text {
+        max-width: rem(552px);
+    }
+
+    .button {
+        @include button--color-white;
+        margin-top: rem(38px);
+    }
+
+    @include mq('tablet') {
+        padding: rem(103px) 0 rem(88px);
+
+        &__container {
+            @include grid(rem(300px) auto, rem(30px), 0);
+        }
+    }
+
+    @include mq('mobile') {
+        padding: rem(40px) 0 rem(40px);
+
+        &__container {
+            @include grid(auto, rem(30px), 0);
+        }
+
+        &__title {
+            padding-left: 0;
+            margin-bottom: rem(16px);
+        }
+
+        .button {
+            margin-top: rem(20px);
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.gform_wrapper {
+    margin-top: rem(24px);
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        @include placeholder {
+            color: $blue-500;
+            font-weight: 400;
+        }
+
+        width: 100%;
+        padding: em(14px, 18px) em(24px, 18px) em(10px, 18px);
+        background-color: $light;
+        font-size: rem(18px);
+        line-height: 1.7777777778;
+        color: $blue-500;
+        font-weight: 400;
+        border-bottom: em(4px, 18px) solid transparent;
+        border: solid rem(1px) $lightgrey;
+        border-radius: rem(6px);
+    }
+
+    button {
+        min-width: rem(261px);
+    }
+
+    textarea {
+        height: rem(132px);
+    }
+
+    .gfield {
+        margin-bottom: rem(16px);
+    }
+
+    .gform_footer {
+        margin-top: rem(30px);
+    }
+
+    .hidden_label {
+        .gfield_label {
+            display: none;
+        }
+    }
+
+    .gform_submission_error {
+        color: $danger-colour;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: $avenir;
+        margin-bottom: 1em;
+    }
+
+    .validation_message {
+        display: none;
+    }
+
+    .gfield_error {
+        input[type='text'],
+        input[type='email'],
+        textarea {
+            border-bottom: solid rem(4px) $danger-colour;
+        }
+    }
+
+    @include mq('tablet') {
+        input[type='text'],
+        input[type='email'],
+        textarea {
+            font-size: rem(17px);
+        }
+    }
+
+    @include mq('mobile') {
+        input[type='text'],
+        input[type='email'],
+        textarea {
+            font-size: rem(16px);
+        }
+    }
+}
+
+.gravityforms--organisation {
+    input[type='text'],
+    input[type='email'],
+    textarea {
+        @include placeholder {
+            color: $blue-500;
+            font-weight: 900;
+        }
+
+        padding: em(14px, 18px) em(24px, 18px) em(14px, 18px);
+        background-color: $light;
+        font-size: rem(18px);
+        line-height: 1.7777777778;
+        color: $blue-500;
+        font-weight: 900;
+        border-bottom: em(4px, 18px) solid transparent;
+        border-radius: 0;
+        border: 0;
+
+        @include mq('tablet') {
+            font-size: rem(17px);
+        }
+
+        @include mq('mobile') {
+            font-size: rem(16px);
+        }
+    }
+
+    button {
+        min-width: rem(0);
+    }
+}

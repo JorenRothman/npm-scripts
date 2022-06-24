@@ -1,0 +1,36 @@
+.newsletter-signup {
+    background-color: $green-400;
+    color: $light;
+    padding: rem(68px) 0 rem(81px);
+
+    &__title {
+        max-width: rem(307px);
+        margin-bottom: rem(12px);
+    }
+
+    &__inner {
+        @include grid(360px auto, rem(103px), 0);
+        align-items: flex-end;
+    }
+
+    @include mq('tablet') {
+        padding: rem(52px) 0 rem(62px);
+
+        &__inner {
+            @include grid(300px auto, rem(40px), 0);
+            align-items: flex-start;
+        }
+    }
+
+    @include mq('mobile') {
+        padding: rem(33px) 0 rem(38px);
+
+        &__inner {
+            @include grid-even(1);
+        }
+
+        &__content {
+            margin-bottom: rem(30px);
+        }
+    }
+}

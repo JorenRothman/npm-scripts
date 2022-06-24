@@ -1,0 +1,113 @@
+.filters {
+    margin-bottom: rem(25px);
+
+    &__title {
+        margin-bottom: rem(16px);
+    }
+
+    &__filter {
+        display: inline-block;
+        width: rem(263px);
+        margin-right: rem(26px);
+        margin-bottom: rem(25px);
+
+        .facetwp-facet {
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--audience {
+            @include select2-color($orange-800);
+        }
+
+        &--region,
+        &--type {
+            @include select2-color($pink-900);
+        }
+
+        &--sense {
+            @include select2-color($green-400);
+        }
+
+        &--age {
+            @include select2-color($blue-500);
+        }
+    }
+
+    &__selection {
+        .facetwp-selections,
+        .facetwp-selections ul,
+        .facetwp-selections li {
+            display: inline-block;
+        }
+
+        .facetwp-selection-label {
+            display: none;
+        }
+
+        .facetwp-selections .facetwp-selection-value {
+            background-image: url('../img/close.svg');
+            background-size: rem(13px);
+            background-position: right 25px top 25px;
+            background-color: $grey;
+            font-size: rem(18px);
+            font-weight: 500;
+            padding: em(21px, 18px) em(24px, 18px);
+            padding-right: em(50px, 18px);
+            min-width: rem(235px);
+            margin-bottom: rem(25px);
+            margin-right: rem(32px);
+        }
+    }
+
+    &__reset {
+        cursor: pointer;
+
+        &:not(.visible) {
+            display: none;
+        }
+    }
+
+    @include mq('tablet') {
+        margin-bottom: rem(19px);
+
+        &__filter {
+            width: rem(202px);
+            margin-right: rem(20px);
+            margin-bottom: rem(19px);
+        }
+
+        &__selection {
+            .facetwp-selections .facetwp-selection-value {
+                font-size: rem(16px);
+                min-width: rem(202px);
+                margin-right: rem(25px);
+                margin-bottom: rem(19px);
+                background-position: right 20px top 22px;
+            }
+        }
+    }
+
+    @include mq('mobile') {
+        margin-bottom: rem(16px);
+
+        &__filter {
+            width: rem(175px);
+            margin-right: rem(18px);
+            margin-bottom: rem(16px);
+        }
+
+        &__selection {
+            .facetwp-selections .facetwp-selection-value {
+                font-size: rem(14px);
+                min-width: rem(175px);
+                margin-right: rem(23px);
+                margin-bottom: rem(16px);
+                background-position: right 18px top 18px;
+            }
+        }
+    }
+}

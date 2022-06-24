@@ -1,0 +1,28 @@
+img,
+video,
+iframe {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+img {
+    object-fit: contain;
+
+    @if ($image-debug) {
+        &:not([alt]),
+        &[alt=''] {
+            border: 2px solid $danger-colour;
+            position: relative;
+        }
+    }
+}
+
+iframe {
+    outline: none;
+    border: 0;
+    box-shadow: none;
+}
+
+.grecaptcha-badge {
+    display: none !important;
+}

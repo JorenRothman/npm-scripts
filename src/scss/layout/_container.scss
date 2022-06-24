@@ -1,0 +1,19 @@
+.container {
+    margin: 0 auto;
+}
+
+.container--medium {
+    max-width: rem(1145px);
+
+    @include mq('screen and (max-width: #{rem(1240px)})') {
+        max-width: calc(100% - rem(40px));
+    }
+}
+
+.container--large {
+    max-width: calc(100% - rem(72px));
+
+    @include mq('screen and (max-width: #{rem(1240px)})') {
+        max-width: calc(100% - rem(40px));
+    }
+}

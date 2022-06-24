@@ -1,0 +1,26 @@
+// Characters to encode.
+$encodings: (('<', '%3C'), ('>', '%3E'), ('#', '%23'), ('"', '%22'));
+
+// Replaces $search in $string with $replace.
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace +
+            str-replace(
+                str-slice($string, $index + str-length($search)),
+                $search,
+                $replace
+            );
+    }
+    @return $string;
+}
+
+// Returns background-image property value for icon.
+@function get-svg($content, $viewBox) {
+    $svg: '<svg viewBox="' + $viewBox + '" xmlns="http://www.w3.org/2000/svg">' +
+        $content + '</svg>';
+    @each $char, $encoded in $encodings {
+        $svg: str-replace($svg, $char, $encoded);
+    }
+    @return url('data:image/svg+xml;charset=utf-8,' + $svg);
+}

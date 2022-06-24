@@ -1,0 +1,15 @@
+@mixin background-default($size: contain, $align: center, $repeat: no-repeat) {
+    background: {
+        position: $align;
+        size: $size;
+        repeat: $repeat;
+    }
+}
+
+@mixin background-cover($align: center, $repeat: no-repeat) {
+    @include background-default(cover, $align, $repeat);
+}
+
+@mixin background-contain($align: center, $repeat: no-repeat) {
+    @include background-default(contain, $align, $repeat);
+}

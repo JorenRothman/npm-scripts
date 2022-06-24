@@ -1,0 +1,87 @@
+.two-column-wysiwyg {
+    margin: rem(78px) 0;
+
+    &__grid {
+        @include grid-even(2, rem(56px), 0);
+        max-width: rem(889px);
+    }
+
+    &__text {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 1.2em;
+        }
+
+        .button {
+            margin-top: rem(10px);
+        }
+    }
+
+    &__extra-information {
+        margin-top: rem(40px);
+    }
+
+    &__extra-information-title {
+        margin-bottom: rem(15px);
+    }
+
+    &__extra-information-grid {
+        @include grid-even(4, rem(28px), 0);
+    }
+
+    @include mq('screen and (max-width: #{rem(1080px)})') {
+        &__extra-information-grid {
+            @include grid-even(3, rem(28px), 0);
+        }
+    }
+
+    @include mq('tablet') {
+        margin: rem(60px) 0;
+
+        &__text {
+            .button {
+                margin-top: rem(7px);
+            }
+        }
+
+        &__extra-information {
+            margin-top: rem(30px);
+        }
+
+        &__extra-information-title {
+            margin-bottom: rem(11px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(860px)})') {
+        &__extra-information-grid {
+            @include grid-even(1, rem(28px));
+        }
+    }
+
+    @include mq('mobile') {
+        margin: rem(52px) 0;
+
+        &__grid {
+            @include grid-even(1, rem(56px));
+        }
+
+        &__text {
+            .button {
+                margin-top: rem(6px);
+            }
+        }
+
+        &__extra-information {
+            margin-top: rem(26px);
+        }
+
+        &__extra-information-title {
+            margin-bottom: rem(10px);
+        }
+    }
+}

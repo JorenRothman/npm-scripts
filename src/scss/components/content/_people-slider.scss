@@ -1,0 +1,102 @@
+.people-slider {
+    overflow: hidden;
+    margin: rem(130px) 0;
+
+    &__introduction {
+        @include grid(rem(300px) auto, rem(180px), 0);
+        margin-bottom: rem(73px);
+    }
+
+    &__title {
+        padding-left: rem(10px);
+    }
+
+    &__text {
+        max-width: rem(552px);
+    }
+
+    &__navigation {
+        margin-bottom: rem(50px);
+        display: flex;
+    }
+
+    &__prev,
+    &__next {
+        display: inline-block;
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__next {
+        margin-left: auto;
+    }
+
+    &__swiper {
+        overflow: visible;
+        align-items: stretch;
+    }
+
+    &__image-outer {
+        @include aspect-ratio(460, 315);
+        position: relative;
+        margin-bottom: rem(15px);
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        display: flex;
+        border-radius: rem(4px);
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+        border-radius: rem(4px);
+    }
+
+    &__organisation,
+    &__name {
+        margin-bottom: rem(3px);
+    }
+
+    &__email {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include mq('tablet') {
+        margin: rem(100px) 0;
+
+        &__introduction {
+            @include grid(rem(300px) auto, rem(30px), 0);
+            margin-bottom: rem(56px);
+        }
+
+        &__navigation {
+            margin-bottom: rem(38px);
+        }
+    }
+
+    @include mq('mobile') {
+        margin: rem(86px) 0;
+
+        &__introduction {
+            @include grid(auto, rem(30px), 0);
+            margin-bottom: rem(48px);
+        }
+
+        &__title {
+            padding-left: 0;
+            margin-bottom: rem(16px);
+        }
+
+        &__navigation {
+            margin-bottom: rem(33px);
+        }
+    }
+}

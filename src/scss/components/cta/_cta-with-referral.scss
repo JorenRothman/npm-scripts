@@ -1,0 +1,73 @@
+.cta-with-referral {
+    margin-bottom: rem(67px);
+
+    &__container {
+        background-color: $pink-900;
+        padding: rem(85px) rem(100px);
+    }
+
+    &__content {
+        @include grid(2fr 3fr, rem(30px), 0);
+        margin-bottom: rem(37px);
+    }
+
+    &__title {
+        max-width: rem(218px);
+    }
+
+    &__items {
+        @include grid-even(3, rem(34px), 0);
+    }
+
+    .referral {
+        border: solid rem(2px) $blue-500;
+        border-radius: rem(4px);
+        padding: rem(20px) rem(22px);
+        position: relative;
+
+        &__title {
+            font-size: rem(20px);
+            font-weight: 700;
+            margin-bottom: rem(10px);
+
+            .button__arrow {
+                margin-left: 5px;
+            }
+
+            .button__arrow-fill {
+                fill: $blue-500;
+            }
+        }
+
+        &__link {
+            @include position-absolute-cover;
+        }
+    }
+
+    @include mq('tablet') {
+        margin-bottom: rem(51px);
+
+        &__container {
+            padding: rem(33px) rem(43px) rem(46px);
+        }
+    }
+
+    @include mq('screen and (max-width: #{rem(830px)})') {
+        &__items {
+            @include grid-even(1, rem(20px));
+        }
+    }
+
+    @include mq('mobile') {
+        margin-bottom: rem(44px);
+
+        &__container {
+            padding: rem(33px) rem(20px) rem(38px);
+        }
+
+        &__content {
+            @include grid(1fr, rem(15px));
+            margin-bottom: rem(20px);
+        }
+    }
+}

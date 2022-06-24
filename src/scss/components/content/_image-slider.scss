@@ -1,0 +1,62 @@
+.image-slider {
+    overflow: hidden;
+    margin: rem(130px) 0;
+
+    &__navigation {
+        margin-bottom: rem(50px);
+        display: flex;
+    }
+
+    &__prev,
+    &__next {
+        display: inline-block;
+        cursor: pointer;
+
+        &.swiper-button-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__next {
+        margin-left: auto;
+    }
+
+    &__swiper {
+        overflow: visible;
+        align-items: stretch;
+    }
+
+    &__slide {
+        @include aspect-ratio(460, 315);
+        position: relative;
+    }
+
+    &__image {
+        @include position-absolute-cover;
+        display: flex;
+        border-radius: rem(4px);
+    }
+
+    &__image-source {
+        object-fit: cover;
+        width: 100%;
+        border-radius: rem(4px);
+    }
+
+    @include mq('tablet') {
+        margin: rem(100px) 0;
+
+        &__navigation {
+            margin-bottom: rem(38px);
+        }
+    }
+
+    @include mq('mobile') {
+        margin: rem(86px) 0;
+
+        &__navigation {
+            margin-bottom: rem(33px);
+        }
+    }
+}
